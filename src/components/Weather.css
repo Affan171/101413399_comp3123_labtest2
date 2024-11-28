@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #2b5876, #4e4376); 
+    color: #fff;
+    overflow-x: hidden; 
+}
+
+.weather-app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; 
+    text-align: center;
+    padding: 20px;
+}
+
+/* Search Bar */
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.weather-input {
+    padding: 10px;
+    width: 300px; 
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.weather-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.weather-button:hover {
+    background-color: #0056b3;
+}
+
+/* Error Message */
+.weather-error {
+    color: red;
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* Weather Card */
+.weather-card {
+    max-width: 800px;
+    width: 100%; 
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+}
+
+/* Current Weather Details */
+.current-weather {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.current-weather .left h1 {
+    font-size: 4rem;
+    margin: 0;
+}
+
+.current-weather .left, .current-weather .right {
+    width: 50%; 
+    text-align: left;
+}
+
+.current-weather .right p {
+    margin: 5px 0;
+}
+
+/* For Responsiveness */
+@media (max-width: 768px) {
+    .current-weather {
+        flex-direction: column; /* Stack columns for smaller screens */
+        align-items: center;
+    }
+
+    .current-weather .left, .current-weather .right {
+        width: 100%; /* Full width for each column */
+        text-align: center;
+    }
+
+    .current-weather .left h1 {
+        font-size: 3rem;
+    }
+}
