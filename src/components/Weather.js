@@ -34,6 +34,11 @@ const Weather = () => {
 
   return (
     <div className="weather-app">
+      {/* Header */}
+      <header className="weather-header">
+        <h1>Weather App</h1>
+        <p>Get the current weather details of any city.</p>
+      </header>  
       {/* Search Bar */}
       <div className="search-container">
         <input
